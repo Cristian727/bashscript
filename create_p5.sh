@@ -1,12 +1,7 @@
 echo "Creando proyecto p5"
-
 mkdir p5
-touch index.html
-touch sketch.js
-
-echo "<h1>Hola mundo</h1>" > p5/index.html
-
-echo `<!DOCTYPE html>
+echo '
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
@@ -21,4 +16,14 @@ echo `<!DOCTYPE html>
     <script src="sketch.js"></script>
   </body>
 </html>
-`
+' > p5/index.html
+
+echo "
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}
+" > p5/sketch.js
